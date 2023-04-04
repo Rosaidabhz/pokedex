@@ -31,7 +31,7 @@ export class PokemonComponent implements OnInit {
     let pokemonName = this.name.toLowerCase();
   
     this.pokemonService.getPokemon(pokemonName).subscribe((data: any) => {
-      this.urlImg = data.sprites.front_default;
+      this.urlImg = data.sprites.versions['generation-v']['black-white'].animated.front_default;
       this.urlHeight = data.height;
       this.urlNam = data.Name;
       this.urlId = data.id;

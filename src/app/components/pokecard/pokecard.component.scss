@@ -20,6 +20,7 @@
   
   .tipo-fuego {
     background-color: #FFA07A;
+    
   }
   
   .tipo-agua {
@@ -27,7 +28,7 @@
   }
   
   .tipo-planta {
-    background-color: #90EE90;
+    background-color: #397739;
   }
   
   .tipo-electrico {
@@ -39,11 +40,11 @@
   }
   
   .tipo-roca {
-    background-color: #A9A9A9;
+    background-color: #BDB76B;
   }
   
   .tipo-hielo {
-    background-color: #BFEFFF;
+    background-color: #00FFFF;
   }
   
   .tipo-lucha {
@@ -59,7 +60,7 @@
   }
   
   .tipo-bicho {
-    background-color: #BDB76B;
+    background-color: #8FBC8F;
   }
   
   .tipo-tierra {
@@ -89,7 +90,6 @@
     border-radius: 0px 0px 8px 8px;
     font-size: 15px;
     font-weight: 700;
-  
     flex: none;
     order: 2;
     align-self: stretch;
@@ -102,11 +102,71 @@
     padding: 0px;
     width: 200px;
     height: 120px;
-    border: 1px solid #DEA8FF;
+    border: 1px solid ;
     border-radius: 8px;
     font-size: 12px;
+    background-color: white;
+
+  }
+  .tipo-fuego {
+    border-color: #FFA07A;
   }
   
+  .tipo-agua {
+    border-color: #ADD8E6;
+  }
+  
+  .tipo-planta {
+    border-color: #397739;
+  }
+  
+  .tipo-electrico {
+    border-color: #FFD700;
+  }
+  
+  .tipo-psiquico {
+    border-color: #FFC0CB;
+  }
+  
+  .tipo-roca {
+    border-color: #BDB76B;
+  }
+  
+  .tipo-hielo {
+    border-color: #00FFFF;
+  }
+  
+  .tipo-lucha {
+    border-color: #CD5C5C;
+  }
+  
+  .tipo-veneno {
+    border-color: #BA55D3;
+  }
+  
+  .tipo-normal {
+    border-color: #C0C0C0;
+  }
+  
+  .tipo-bicho {
+    border-color: #8FBC8F;
+  }
+  
+  .tipo-tierra {
+    border-color: #D2B48C;
+  }
+  
+  .tipo-dragon {
+    border-color: #8A2BE2;
+  }
+  
+  .tipo-hada {
+    border-color: #FF69B4;
+  }
+  
+  .tipo-fantasma {
+    border-color: #6A5ACD;
+  } 
   .datos {
     font-style: normal;
     font-size: 14px;

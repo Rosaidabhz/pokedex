@@ -1,6 +1,6 @@
   <div class="row justify-content-center">
     <div *ngFor="let pokemon of pokemons" class="col-lg-2 col-md-3 col-6 mb-4 mx-3">
-      <div class="cuadro-1">
+      <div class="cuadro-1" [ngClass]="getTipoPokemonClass(pokemon.type)">
         <h1 class="titlepokemon" [ngClass]="getTipoPokemonClass(pokemon.type)">{{ pokemon.name }}</h1>
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{ pokemon.url.split('/')[6] }}.png" class="img-list">
         <div class="calificacion">
