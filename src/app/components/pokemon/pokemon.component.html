@@ -1,0 +1,45 @@
+<div class="button">
+  <div class="container-search">
+    <input class="search" type="text" placeholder="busca el nombre del pokemon “bulbasaur”" [(ngModel)]="name">
+    <button style="margin-top: 10px; background-color:#C0D6B5; width: 60px; height: 50px;"  (click)="search()">Buscar</button>
+  </div>
+</div>
+
+<div class="container">
+  <button class="btn btn-primary mt-3 mx-auto d-block boton-pokemones" type="button" data-toggle="modal" data-target="#pokecardModal" *ngIf="showPokecard">
+    Ver detalles del Pokémon
+  </button>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="pokecardModal">
+      <div [ngClass]="pokemonTypeClass" class="pokecard">
+        <img class="pokeball" src="assets/images/Pokeball.png">
+        <p class="namepokemon">{{urlNam}}</p>
+        <div class="image">
+          <img class="img" src="{{urlImg}}">
+        </div>
+        <div class="cardtext">
+          <p class="text">Id: {{urlId}}</p>
+          <div class="progress-bar">
+            <div class="progress" [style.width.%]="urlHp" style="background-color: red;"></div>
+          </div>
+          <p class="text">Attack: {{urlAtt}}</p>
+          <div class="progress-bar">
+            <div class="progress" [style.width.%]="urlAtt" style="background-color: blue;"></div>
+          </div>
+          <p class="text">Defense: {{urlDef}}</p>
+          <div class="progress-bar">
+            <div class="progress" [style.width.%]="urlDef" style="background-color: green;"></div>
+          </div>
+          <p class="text">Special Attack: {{urlSpAtt}}</p>
+          <div class="progress-bar">
+            <div class="progress" [style.width.%]="urlSpAtt" style="background-color: purple;"></div>
+          </div>
+          <p class="text">Special Defence: {{urlSpDef}}</p>
+          <div class="progress-bar">
+            <div class="progress" [style.width.%]="urlSpDef" style="background-color: orange;"></div>
+          </div>
+        </div>
+               
+      </div>
+</div>

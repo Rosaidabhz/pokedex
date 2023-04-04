@@ -1,0 +1,103 @@
+.footer {
+    padding: 30px 30px 40px 30px;
+    color: rgb(0, 0, 0);
+    background: rgb(211, 211, 211); 
+    text-decoration:none; 
+}
+.about-footer{
+  color: rgb(255, 0, 98);
+}
+.aboutt-footer{
+  font-weight: 300;
+  
+}
+  .footer-container-one {
+    width: 100%;
+    display: flex;
+    align-items: center; }
+  
+  .footer-links {
+    width: 40%;
+    display: flex; }
+  
+  .footer-links-box {
+    margin: 0 20px; }
+  
+  .footer-links-box h4 {
+    font-weight: 600;
+    margin-bottom: 10px; }
+  
+  .footer-links-box ul li {
+    margin: 5px 0;
+    text-decoration:none ;
+ }
+  
+  .footer-links-box ul li a {
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    text-decoration:none; 
+
+}
+  
+  .footer-links-box ul li a:hover {
+    color: rgb(255, 0, 119); }
+  
+  .footer-about {
+    width: 60%;
+    padding: 0 30px; }
+  
+  .footer-about {
+    font-weight: 600;
+    margin-bottom: 18px; }
+  
+  .footer-about  {
+    font-size: 14px;
+    padding-bottom: 10px; }
+  
+  .footer-about p {
+    font-size: 16px; }
+  
+  .footer-space {
+    margin: 20px 0; }
+  
+  .footer-container-two {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between; }
+  
+  .footer-social a {
+    margin: 0 10px;
+    color: white; }
+  
+  .footer-social a:hover {
+    color: rgb(255, 0, 106); }
+  
+  /*MEDIA QUIERES*/
+  @media screen and (max-width: 1000px) {
+    .footer-container-one {
+      flex-direction: column; }
+    .footer-links {
+      width: 100%;
+      justify-content: center;
+      order: 1;
+      margin-top: 30px; }
+    .footer-about {
+      width: 100%;
+      order: 0; } }
+  
+  @media screen and (max-width: 610px) {
+    .footer-container-two {
+      flex-direction: column;
+      text-align: center; }
+    .footer-social {
+      margin-top: 15px; } }
+  
+  @media screen and (max-width: 500px) {
+    .footer-links {
+      flex-direction: column; }
+    .footer-links-box {
+      margin: 20px 0;
+      text-align: center; }
+    .footer-about {
+      display: none; } }
+  

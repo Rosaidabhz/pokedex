@@ -1,0 +1,126 @@
+.contenedor-cards{
+  margin: 0%;
+  justify-content: center;
+  gap:1rem;
+}
+.img-list {
+    max-width: 100%;
+    height: auto;
+  }
+  .card-1 {
+    margin: 10px;
+  }
+  .titlepokemon {
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 5px;
+  }
+  
+  .tipo-fuego {
+    background-color: #FFA07A;
+  }
+  
+  .tipo-agua {
+    background-color: #ADD8E6;
+  }
+  
+  .tipo-planta {
+    background-color: #90EE90;
+  }
+  
+  .tipo-electrico {
+    background-color: #FFD700;
+  }
+  
+  .tipo-psiquico {
+    background-color: #FFC0CB;
+  }
+  
+  .tipo-roca {
+    background-color: #A9A9A9;
+  }
+  
+  .tipo-hielo {
+    background-color: #BFEFFF;
+  }
+  
+  .tipo-lucha {
+    background-color: #CD5C5C;
+  }
+  
+  .tipo-veneno {
+    background-color: #EE82EE;
+  }
+  
+  .tipo-normal {
+    background-color: #C2C2A3;
+  }
+  
+  .tipo-bicho {
+    background-color: #BDB76B;
+  }
+  
+  .tipo-tierra {
+    background-color: #D2B48C;
+  }
+  
+  .tipo-dragon {
+    background-color: #6B4E4E;
+  }
+  
+  .tipo-hada {
+    background-color: #EE99AC;
+  }
+  
+  .tipo-fantasma {
+    background-color: #7c71c5;
+  }
+  
+  
+  .titlepokemon {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 95px;
+    align-items: flex-start;
+    position: absolute;
+    width: 200px;
+    height: 24px;
+    border-radius: 0px 0px 8px 8px;
+    font-size: 15px;
+    font-weight: 700;
+  
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+  
+  .cuadro-1 {
+    box-sizing: border-box;
+    display: flex;
+    padding: 0px;
+    width: 200px;
+    height: 120px;
+    border: 1px solid #DEA8FF;
+    border-radius: 8px;
+    font-size: 12px;
+  }
+  
+  .datos {
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: 0.20em;
+    color: #000000;
+    margin-left: 0px;
+    font-weight: 700;
+  }
+  
+  .resultado-1 {
+    color: rgb(146, 49, 92);
+    line-height: 16px;
+    font-weight: 700;
+  
+  }
+  
