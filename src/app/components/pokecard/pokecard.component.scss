@@ -1,14 +1,14 @@
 .contenedor-cards{
-  margin: 0%;
   justify-content: center;
-  gap:1rem;
 }
 .img-list {
     max-width: 100%;
     height: auto;
   }
-  .card-1 {
-    margin: 10px;
+  .row {
+    margin-right: 0rem !important;
+    margin-left: 0px !important;
+    justify-content: center;
   }
   .titlepokemon {
     font-size: 24px;
@@ -77,8 +77,7 @@
   .tipo-fantasma {
     background-color: #7c71c5;
   }
-  
-  
+
   .titlepokemon {
     color: rgb(0, 0, 0);
     text-align: center;
@@ -124,3 +123,10 @@
   
   }
   
+  @media  (max-width: 400px){
+    .row {
+      margin-right: 8rem !important;
+      margin-left: 0px !important;
+    }
+    
+  }
