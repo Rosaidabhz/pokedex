@@ -55,7 +55,7 @@
   display: flex;
   justify-content: center; 
   align-items: center;  
-  background: #d64e82;
+  background: #cc3934;
   margin-bottom: 1rem;
   border-color: #000 ; 
   font-size: medium;
@@ -144,6 +144,16 @@
      align-items: center;
      letter-spacing: 0.38em;
  
+ }
+ .boton-search{
+  border-radius: 50%;
+  margin-top: 10px; 
+  background-color:#cc3934; 
+  width: 60px; 
+  height: 50px;
+  border: 2px solid #ffffff;
+  border: 1px solid #000;
+  color: #ffffff;
  }
  
  .search{
