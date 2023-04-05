@@ -14,12 +14,18 @@
 
 <div class="modal" tabindex="-1" role="dialog" id="pokecardModal">
   <div [ngClass]="pokemonTypeClass" class="pokecard">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    <p class="name-pokemon {{pokemonTypeClass}}">{{name}}</p>
     <img class="pokeball" src="assets/images/Pokeball.png">
     <p class="namepokemon">{{urlNam}}</p>
-    <div class="image">
+    <div class="image" style="text-align: center;">
       <img class="img" src="{{urlImg}}">
-    </div>
-    <div class="cardtext">
+    </div>    
+    <div class="cardtext" >
+      <p class="name-pokemon {{pokemonTypeClass}}">Tipo: {{getTranslatedType()}}</p>
+      <p>{{ description }}</p>   
       <p class="text">Ataque: {{urlAtt}}</p>
       <div class="progress-bar">
         <div class="progress" [style.width.%]="urlAtt" style="background-color: blue;"></div>
@@ -36,8 +42,6 @@
       <div class="progress-bar">
         <div class="progress" [style.width.%]="urlSpDef" style="background-color: orange;"></div>
       </div>
-      <p class="name-pokemon {{pokemonTypeClass}}">{{name}}</p>
-      <p>{{ description }}</p>   
     </div>      
   </div>
 </div>

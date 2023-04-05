@@ -43,7 +43,7 @@ export class PokemonComponent implements OnInit {
         this.urlType = data.types[0].type.name;
         this.urlType2 = data.types[1].type.name;
       }
-  
+      this.urlType = (this.urlType);
       this.urlHp = data.stats[0].base_stat;
       this.urlAtt = data.stats[1].base_stat;
       this.urlDef = data.stats[2].base_stat;
@@ -58,6 +58,49 @@ export class PokemonComponent implements OnInit {
         this.showPokecard = true;
       });
     }); 
+  }
+  
+  getTranslatedType() {
+    switch(this.urlType) {
+      case "normal":
+        return "normal";
+      case "fire":
+        return "fuego";
+      case "water":
+        return "agua";
+      case "electric":
+        return "eléctrico";
+      case "grass":
+        return "planta";
+      case "ice":
+        return "hielo";
+      case "fighting":
+        return "lucha";
+      case "poison":
+        return "veneno";
+      case "ground":
+        return "tierra";
+      case "flying":
+        return "volador";
+      case "psychic":
+        return "psíquico";
+      case "bug":
+        return "bicho";
+      case "rock":
+        return "roca";
+      case "ghost":
+        return "fantasma";
+      case "dragon":
+        return "dragón";
+      case "dark":
+        return "oscuro";
+      case "steel":
+        return "acero";
+      case "fairy":
+        return "hada";
+      default:
+        return this.urlType;
+    }
   }
   
      

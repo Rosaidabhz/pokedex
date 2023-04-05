@@ -20,8 +20,8 @@
 .pokecard {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   height: 100%;
   padding: 1rem;
   width: 500px;
@@ -31,33 +31,25 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@media screen and (max-width: 1100px) {
+@media (max-width: 768px) {
   .pokecard {
-    max-width: 100%;
-    margin: 0 auto;
-    height: 700px;
-  }}
-@media screen and (max-width: 600px) {
-  .pokecard {
-    max-width: 80%;
-    margin: 0 auto;
-    height: 700px;
+    width: 90%;
+    border-radius: 20px;
+  }
+
+  .pokecard h2 {
+    font-size: 1.5rem; 
   }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) { 
   .pokecard {
-    max-width: 90%;
-    height: 700px;
-
+    padding: 0.5rem; 
+    border-radius: 10px;
   }
-}
 
-@media screen and (min-width: 768px) {
-  #pokecard {
-    width: 50%;
-    margin: 0 auto;
-    height: 700px;
+  .pokecard h2 {
+    font-size: 1rem; 
   }
 }
 
@@ -105,43 +97,45 @@
   font-style: normal;
   font-size: 20px;
   line-height: 26px; 
-  justify-content: center;
-  align-items: center;
   }
- .image{
-     height: 200px;
-     width: 200px;
+ .img{
+     height: 150px;
+     width: 150px;
      z-index: 3;
-     top: auto;
+     align-items: center;
+     justify-content: center;
  }
- img{
-     width: 200px;
-     height: 200px;
-     z-index: 3;
+ .image{
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
 
  }
+
  .name-pokemon{
   font-size: 30px;
   text-align: center;
   margin-top: 10px;
  }
 
-
+ .pokecard .text.type {
+  text-align: left !important;
+}
 
  .grass-type .name-pokemon { color: green; background-color: transparent;}
- .fire-type .name-pokemon { color: red;background-color: transparent; }
- .water-type .name-pokemon { color: blue; background-color: transparent;}
- .bug-type .name-pokemon { color: #9ACD32; background-color: transparent;}
+ .fire-type .name-pokemon { color: rgb(131, 20, 20);background-color: transparent; }
+ .water-type .name-pokemon { color: rgb(11, 11, 100); background-color: transparent;}
+ .bug-type .name-pokemon { color: #506b19; background-color: transparent;}
  .normal-type .name-pokemon { color: #646464; background-color: transparent;}
  .poison-type .name-pokemon { color: purple; background-color: transparent;}
- .electric-type .name-pokemon { color: yellow; background-color: transparent;}
+ .electric-type .name-pokemon { color: rgb(77, 77, 6); background-color: transparent;}
  .ground-type .name-pokemon { color: #8B4513;background-color: transparent; }
- .fairy-type .name-pokemon { color: #EE82EE; background-color: transparent;}
+ .fairy-type .name-pokemon { color: #aa61aa; background-color: transparent;}
  .fighting-type .name-pokemon { color: #FF4500; background-color: transparent;}
- .psychic-type .name-pokemon { color: #FF69B4; background-color: transparent;}
+ .psychic-type .name-pokemon { color: #9c4571; background-color: transparent;}
  .rock-type .name-pokemon { color: #535353; background-color: transparent;}
- .steel-type .name-pokemon { color: #B0C4DE; background-color: transparent;}
- .ice-type .name-pokemon { color: #00BFFF; background-color: transparent;}
+ .steel-type .name-pokemon { color: #6d798a; background-color: transparent;}
+ .ice-type .name-pokemon { color: #005a79; background-color: transparent;}
  .ghost-type .name-pokemon { color: #483D8B; background-color: transparent;}
  .dragon-type .name-pokemon { color: #9400D3; background-color: transparent;}
  
@@ -152,7 +146,6 @@
      margin-left: 180px;
      margin-bottom: 330px;
      z-index: 1;
- 
  }
  input {
      border: 0;
@@ -203,25 +196,49 @@ align-items: center;
  
 
  
- @media screen and (max-width: 600px) {
-    
-     .imgpokebola {  
-       margin-top: 60px;
-       width: 100%;
-       margin-left: 0;
-     }
-     
-    
-      .cardtext{
-         max-width: 80%;}
-     
-     .pokeball{
-         max-width: 30%;
-     
-         }
- 
- 
- }
+@media (max-width: 1000px) {
+  .pokecard {
+  width: 100%;
+  border-radius: 20px;
+  height: 700px;
+  justify-content: center;
+  }
+  }
+  
+  .pokecard h2 {
+  font-size: 1.5rem;
+  }
+  
+  .close {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    opacity: 0.5;
+    cursor: pointer;
+    margin-left: 90%; 
+    top: 0%;
+    position: absolute;
+}
+
+  .close:hover {
+    color: #000;
+    opacity: 0.75;
+  }
+
+  @media (max-width: 480px) {
+  .pokecard {
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+  }
+  
+  .pokecard h2 {
+  font-size: 1rem;
+  }
+  }
+  
+
  .grass-type {
     background-color: #9bcc50;
   }
