@@ -107,16 +107,36 @@
      width: 200px;
      height: 200px;
      z-index: 3;
- 
- 
- 
+
  }
+ .name-pokemon{
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50px;
+ }
+ .grass-type .name-pokemon { color: green; background-color: transparent;}
+ .fire-type .name-pokemon { color: red;background-color: transparent; }
+ .water-type .name-pokemon { color: blue; background-color: transparent;}
+ .bug-type .name-pokemon { color: #9ACD32; background-color: transparent;}
+ .normal-type .name-pokemon { color: #A9A9A9; background-color: transparent;}
+ .poison-type .name-pokemon { color: purple; background-color: transparent;}
+ .electric-type .name-pokemon { color: yellow; background-color: transparent;}
+ .ground-type .name-pokemon { color: #8B4513;background-color: transparent; }
+ .fairy-type .name-pokemon { color: #EE82EE; background-color: transparent;}
+ .fighting-type .name-pokemon { color: #FF4500; background-color: transparent;}
+ .psychic-type .name-pokemon { color: #FF69B4; background-color: transparent;}
+ .rock-type .name-pokemon { color: #808080; background-color: transparent;}
+ .steel-type .name-pokemon { color: #B0C4DE; background-color: transparent;}
+ .ice-type .name-pokemon { color: #00BFFF; background-color: transparent;}
+ .ghost-type .name-pokemon { color: #483D8B; background-color: transparent;}
+ .dragon-type .name-pokemon { color: #9400D3; background-color: transparent;}
+ 
  .pokeball{
      position: absolute;
      width: 220px;
      height: 200px;
      margin-left: 180px;
-     margin-bottom: 400px;
+     margin-bottom: 330px;
      z-index: 1;
  
  }
