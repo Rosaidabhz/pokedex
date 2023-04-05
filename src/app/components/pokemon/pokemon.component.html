@@ -19,10 +19,6 @@
           <img class="img" src="{{urlImg}}">
         </div>
         <div class="cardtext">
-          <p class="text">Id: {{urlId}}</p>
-          <div class="progress-bar">
-            <div class="progress" [style.width.%]="urlHp" style="background-color: red;"></div>
-          </div>
           <p class="text">Attack: {{urlAtt}}</p>
           <div class="progress-bar">
             <div class="progress" [style.width.%]="urlAtt" style="background-color: blue;"></div>
@@ -39,6 +35,7 @@
           <div class="progress-bar">
             <div class="progress" [style.width.%]="urlSpDef" style="background-color: orange;"></div>
           </div>
+          <p class="namepokemon">{{urlNam}}</p>
         </div>
                
       </div>
