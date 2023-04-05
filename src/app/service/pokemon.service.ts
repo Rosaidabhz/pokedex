@@ -19,4 +19,7 @@ export class PokemonService {
   getPokemon(name: string){
       return this.http.get('https://pokeapi.co/api/v2/pokemon/'+name);
   }
+  getPokemonSpeciesDescription(url: string) {
+    return this.http.get(url);
+  }
   }

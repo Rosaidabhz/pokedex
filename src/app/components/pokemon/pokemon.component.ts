@@ -20,7 +20,7 @@ export class PokemonComponent implements OnInit {
   urlSpAtt: number = 0;
   urlSpDef: number = 0;
   urlSpeed: number = 0;
-
+  description: string = '';
   showPokecard: boolean = false;
 
   constructor(private pokemonService: PokemonService) {}
@@ -29,13 +29,13 @@ export class PokemonComponent implements OnInit {
 
   search() {
     let pokemonName = this.name.toLowerCase();
-  
+    
     this.pokemonService.getPokemon(pokemonName).subscribe((data: any) => {
       this.urlImg = data.sprites.versions['generation-v']['black-white'].animated.front_default;
       this.urlHeight = data.height;
       this.urlNam = data.Name;
       this.urlId = data.id;
-
+  
       if (data.types.length < 2) {
         this.urlType2 = "";
         this.urlType = data.types[0].type.name;
@@ -43,18 +43,24 @@ export class PokemonComponent implements OnInit {
         this.urlType = data.types[0].type.name;
         this.urlType2 = data.types[1].type.name;
       }
-
+  
       this.urlHp = data.stats[0].base_stat;
       this.urlAtt = data.stats[1].base_stat;
       this.urlDef = data.stats[2].base_stat;
       this.urlSpAtt = data.stats[3].base_stat;
       this.urlSpDef = data.stats[4].base_stat;
       this.urlSpeed = data.stats[5].base_stat;
-
-      console.log(data);
-      this.showPokecard = true;
-    });
+      this.description = data.species.url;
+      this.pokemonService.getPokemonSpeciesDescription(this.description).subscribe((data: any) => {
+        const description = data.flavor_text_entries.find((entry: any) => entry.language.name === 'es');
+        this.description = description.flavor_text;
+        console.log(data);
+        this.showPokecard = true;
+      });
+    }); 
   }
+  
+     
   get pokemonTypeClass() {
     let cssClass = '';
     switch (this.urlType) {

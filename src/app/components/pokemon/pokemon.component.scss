@@ -14,6 +14,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  height: 100%;
 }
 
 .pokecard {
@@ -21,7 +22,8 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 600px;
+  height: 100%;
+  padding: 1rem;
   width: 500px;
   border-radius: 30px;
   position: fixed;
@@ -29,17 +31,25 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+@media screen and (max-width: 1100px) {
+  .pokecard {
+    max-width: 100%;
+    margin: 0 auto;
+    height: 700px;
+  }}
 @media screen and (max-width: 600px) {
   .pokecard {
     max-width: 80%;
     margin: 0 auto;
+    height: 700px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .pokecard {
     max-width: 90%;
+    height: 700px;
+
   }
 }
 
@@ -47,6 +57,7 @@
   #pokecard {
     width: 50%;
     margin: 0 auto;
+    height: 700px;
   }
 }
 
@@ -62,8 +73,8 @@
 }
 
  .cardtext{
-  height: 350px;
-  width: 400px;
+  height: 100%;
+  width: 100%;
   left: 95px;
   top: 417px;
   background: #FFFFFF;
@@ -112,20 +123,23 @@
  .name-pokemon{
   font-size: 30px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 10px;
  }
+
+
+
  .grass-type .name-pokemon { color: green; background-color: transparent;}
  .fire-type .name-pokemon { color: red;background-color: transparent; }
  .water-type .name-pokemon { color: blue; background-color: transparent;}
  .bug-type .name-pokemon { color: #9ACD32; background-color: transparent;}
- .normal-type .name-pokemon { color: #A9A9A9; background-color: transparent;}
+ .normal-type .name-pokemon { color: #646464; background-color: transparent;}
  .poison-type .name-pokemon { color: purple; background-color: transparent;}
  .electric-type .name-pokemon { color: yellow; background-color: transparent;}
  .ground-type .name-pokemon { color: #8B4513;background-color: transparent; }
  .fairy-type .name-pokemon { color: #EE82EE; background-color: transparent;}
  .fighting-type .name-pokemon { color: #FF4500; background-color: transparent;}
  .psychic-type .name-pokemon { color: #FF69B4; background-color: transparent;}
- .rock-type .name-pokemon { color: #808080; background-color: transparent;}
+ .rock-type .name-pokemon { color: #535353; background-color: transparent;}
  .steel-type .name-pokemon { color: #B0C4DE; background-color: transparent;}
  .ice-type .name-pokemon { color: #00BFFF; background-color: transparent;}
  .ghost-type .name-pokemon { color: #483D8B; background-color: transparent;}
@@ -183,7 +197,10 @@
  border-radius: 2px;
  justify-content: center;
  margin-top: 20px;
- }
+align-items: center;
+}
+
+ 
 
  
  @media screen and (max-width: 600px) {
