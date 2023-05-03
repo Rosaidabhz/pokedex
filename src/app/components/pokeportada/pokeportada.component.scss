@@ -26,7 +26,7 @@ img {
 .titlebienvenidos-2{
   position: center;  
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 35px;
   color: #0c0c0c;  
 }
@@ -68,6 +68,9 @@ img {
   height: 400px;
   padding: 10px;
 }
+p{
+  font-family:'Arial';
+}
 @media screen and (max-width: 767px) {
   .imgpokebola {
     width: 100%;
@@ -78,7 +81,9 @@ img {
     justify-content: center;
     align-items: center;
   }
-
+  .cuadro-2 {
+    padding: 0px;
+  }
   .a.d-flex {
     align-items: center;
     justify-content: center;

@@ -1,0 +1,220 @@
+ul[aria-hidden="true"] {
+  display: none;
+}
+.body{
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(https://p4.wallpaperbetter.com/wallpaper/977/955/731/pokemon-latias-latios-pixels-wallpaper-preview.jpg);
+}
+.team-pokemons, ul{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+/* Títulos */
+h2, h3, h5{
+text-align: center;
+color: #000000;
+font-family: 'Press Start 2P', cursive;
+}
+h5{
+  color: #800b0b;
+}
+
+/* Cuadros de Pokémon */
+.cuadro-1 {
+background: rgba(0, 0, 0, 0.7);
+padding: 10px;
+margin: 10px;
+width: 200px;
+height: auto;
+border-radius: 10px;
+text-align: center;
+justify-content: center;
+}
+.pokedex {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px; /* espacio entre elementos */
+}
+
+.cuadro-2 {
+  border: 1px solid salmon;
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+  box-shadow:
+    inset 0 -3em 3em rgba(235, 111, 111, 0.1),
+    0 0  0 1px rgb(206, 111, 158),
+    0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.img2 {
+  width: 100%;
+  height: 100%;
+}
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 1.1rem;
+  width: 300px;
+}
+
+.search-button {
+  background-color: #ff0000;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 0.5rem;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #ffbf00;
+  color: white;
+}
+
+.fa-search {
+  color: white;
+}
+
+/* Nombre de Pokémon */
+.titlepokemon {
+font-size: 20px;
+margin-top: 10px;
+margin-bottom: 5px;
+}
+
+/* Estadísticas de Pokémon */
+.datos {
+font-size: 14px;
+margin-top: 10px;
+margin-bottom: 5px;
+color: #fff;
+}
+
+/* Texto de estadísticas de Pokémon */
+.datostexto {
+font-size: 14px;
+margin-top: 5px;
+margin-bottom: 5px;
+color: #fff;
+text-align: left;
+}
+
+/* Botones */
+.btn {
+margin: 5px;
+font-family: 'Press Start 2P', cursive;
+}
+.click{
+  pointer-events: none;
+  cursor: none;
+}
+.dos{
+ background-color: #e2397a;
+ border: 0px solid transparent !important;
+}
+.tres{
+  background-color: #000000;
+  border: 0px solid transparent !important;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+.cuatro{
+  font-size: 10px;
+  background-color: #ffbf00;
+  color: #000;
+}
+/* Lista de Pokémon */
+ul {
+list-style-type: none;
+margin: 0;
+padding: 10px;
+}
+
+/* Oponentes */
+.col-md-6{
+  width: 100%;
+}
+.col-md-6 ul {
+margin-left: 30px;
+}
+
+/* Selección aleatoria de Pokémon */
+.col-md-6 button {
+margin-left: 30px;
+}
+
+/* Equipo de Pokémon */
+.col-md-6 h3:first-of-type {
+margin-top: 50px;
+}
+
+/* Estadísticas de equipo y oponentes */
+ul li {
+font-size: 18px;
+margin-top: 5px;
+margin-bottom: 5px;
+color: #fff;
+font-family: 'Press Start 2P', cursive;
+}
+
+/* Resultado de la batalla */
+.col-md-6 h2:first-of-type {
+margin-top: 50px;
+}
+
+/* Imagen del Pokémon */
+.pokemon-img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  ul{
+    justify-content: center;
+    text-align: center;
+  }
+  .col-md-6 ul {
+    margin-left: 0;
+    margin: auto;
+    }
+    h2, h3, h5{
+      font-size: 20px;
+    }
+  
+}

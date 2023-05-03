@@ -1,0 +1,77 @@
+<div class="body">
+  <div class="container">
+    <h2 class="title">VS Pokemon Batalla</h2>
+    <div class="team">
+      <div class="team-pokemons">
+        <div class="team-list">
+          <h5>¡Has tu equipo pokémons e inicia la batalla!</h5>
+          <form (submit)="search()">
+            <div class="search-container">
+              <h6 class="search-label">¡Busca a tu Pokémon favorito!</h6>
+              <div class="search-input-container">
+                <input type="text" [(ngModel)]="searchTerm" name="searchTerm" class="search-input" required>
+                <button type="submit" class="search-button">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+          
+          <ul>
+            <li class="cuadro-1" *ngFor="let pokemon of searchResults">
+              <div class="cuadro-1">
+                <img class="img" src="{{ pokemon.urlImg }}">
+                <br>
+                <span class="titlepokemon">{{ pokemon.name }}</span>
+                <br>
+                <span class="datos">{{ pokemon.attack }}</span>
+                <br>
+                <span class="datos">{{ pokemon.defense }}</span>
+                <br>
+                <span class="datos">{{ pokemon.speed }}</span>
+                <br>
+                <button class="btn btn-primary cuatro" (click)="addPokemonToTeam(pokemon)">Select</button>
+              </div>
+            </li>
+          </ul>
+          <div class="container">
+            <div class="row">
+
+              <div class="col-md-6">
+                <div class="team-pokemons">
+                  <div class="team-header">
+                    <button class="btn btn-primary click">Tu equipo pokemon:</button>
+                    <ul class="pokedex">
+                      <li *ngFor="let pokemon of teamPokemons">
+                        <div class="cuadro-2">
+                          <img class="img2" src="{{ pokemon.urlImg }}">  
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="team-pokemons">
+                  <div class="team-header">
+                    <button class="btn btn-primary dos" (click)="selectRandomPokemons()">Random Pokémons</button>
+                    <ul class="pokedex">
+                      <li *ngFor="let pokemon of randomPokemons">
+                        <div class="cuadro-2">
+                          <img class="img2" src="{{ pokemon.urlImg }}">  
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary tres" (click)="startBattle()">Pelea!</button>
+          <div *ngIf="battleStarted" class="battle-result">
+            <h3>Resultado de la batalla:</h3>
+            <h5>{{ battleResult }}</h5>
+          </div>
+        </div>
+      </div>

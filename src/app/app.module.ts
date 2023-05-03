@@ -10,6 +10,8 @@ import { PokecardComponent } from './components/pokecard/pokecard.component';
 import { PokeportadaComponent } from './components/pokeportada/pokeportada.component';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { FormsModule } from '@angular/forms';
+import { VspokemonComponent } from './components/vspokemon/vspokemon.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     PokecardComponent,
     PokeportadaComponent,
-    PokemonComponent
+    PokemonComponent,
+    VspokemonComponent
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PokeportadaComponent } from './components/pokeportada/pokeportada.component';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
-import { PokecardComponent } from './components/pokecard/pokecard.component';
+import { VspokemonComponent } from './components/vspokemon/vspokemon.component';
 
 const routes: Routes = [
 {
@@ -16,6 +16,10 @@ const routes: Routes = [
 {
   path:'home',
   component:PokeportadaComponent
+},
+{
+  path:'vs',
+  component:VspokemonComponent
 }
 ];
 
