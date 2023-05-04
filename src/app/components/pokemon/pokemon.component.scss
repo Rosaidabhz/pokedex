@@ -5,7 +5,10 @@
     margin-top: 10px;
  
  }
-
+.img{
+  width: 120px !important;
+  height: 120px !important;
+}
 .pokecard {
   display: flex;
   justify-content: center;
@@ -43,11 +46,14 @@
     border-radius: 10px;
   }
 
-  .pokecard h2 {
+  .pokecard h2,.namepokemon {
     font-size: 20px; 
   }
-  p{
-    font-size: 20px;
+  .name-pokemon{
+    font-size: 25px !important;
+  }
+  .text{
+    font-size: 16px !important;
   }
   .progress-bar {
     width: 100%;
@@ -69,10 +75,6 @@
     margin-bottom: 85%;
     z-index: 1;
 }
-.name-pokemon{
-  font-size: 20px !important;
-
- }
 
 }
 

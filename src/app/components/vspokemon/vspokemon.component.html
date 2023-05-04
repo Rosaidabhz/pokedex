@@ -40,10 +40,10 @@
               <div class="col-md-6">
                 <div class="team-pokemons">
                   <div class="team-header">
-                    <button class="btn btn-primary click">Tu equipo pokemon:</button>
+                    <button class="btn btn-primary click">Tu equipo pokemon</button>
                     <ul class="pokedex">
                       <li *ngFor="let pokemon of teamPokemons">
-                        <div class="cuadro-2">
+                        <div class="cuadro-3">
                           <img class="img2" src="{{ pokemon.urlImg }}">  
                         </div>
                       </li>
@@ -54,7 +54,7 @@
               <div class="col-md-6">
                 <div class="team-pokemons">
                   <div class="team-header">
-                    <button class="btn btn-primary dos" (click)="selectRandomPokemons()">Random Pokémons</button>
+                    <button class="btn btn-primary dos" (click)="selectRandomPokemons()">Generar equipo rival</button>
                     <ul class="pokedex">
                       <li *ngFor="let pokemon of randomPokemons">
                         <div class="cuadro-2">
