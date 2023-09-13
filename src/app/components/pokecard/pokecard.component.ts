@@ -7,13 +7,18 @@ import { PokemonService } from 'src/app/service/pokemon.service';
   styleUrls: ['./pokecard.component.scss']
 })
 export class PokecardComponent implements OnInit {
-
-  pokemons: any[] = [];
+  pokemons: any[] = []; // Aquí debes cargar tus datos de Pokémon
+  currentPage: number = 1;
+  
+  displayedPageNumbers: number[] = [];
+  cardsPerPage: number = 15;
 
   constructor(private pokemonService: PokemonService) { }
 
   ngOnInit() {
     this.getPokemons();
+    this.updateDisplayedPageNumbers();
+
   }
 
   getPokemons() {
@@ -66,5 +71,44 @@ export class PokecardComponent implements OnInit {
     }
   }
   
-  
+  previousPage() {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+      this.updateDisplayedPageNumbers();
+    }
+  }
+
+  nextPage() {
+    const totalPages = this.getTotalPages();
+    if (this.currentPage < totalPages) {
+      this.currentPage++;
+      this.updateDisplayedPageNumbers();
+    }
+  }
+
+  goToPage(page: number) {
+    const totalPages = this.getTotalPages();
+    if (page >= 1 && page <= totalPages) {
+      this.currentPage = page;
+      this.updateDisplayedPageNumbers();
+    }
+  }
+
+  getTotalPages(): number {
+    return Math.ceil(this.pokemons.length / this.cardsPerPage);
+  }
+
+  updateDisplayedPageNumbers() {
+    const totalPages = this.getTotalPages();
+    const mid = Math.floor(totalPages / 2);
+    const offset = this.currentPage - mid;
+    this.displayedPageNumbers = [];
+
+    for (let i = 0; i < 3; i++) {
+      const page = this.currentPage + i - 1;
+      if (page >= 1 && page <= totalPages) {
+        this.displayedPageNumbers.push(page);
+      }
+    }
+  }
 }

@@ -37,7 +37,7 @@ export class VspokemonComponent {
   
   selectRandomPokemons() {
     this.randomPokemons = [];
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 2; i++) {
       this.pokemonService.getRandomPokemon().subscribe((data: any) => {
         const pokemon: Pokemon = {
           urlImg: data.sprites.versions['generation-v']['black-white'].animated.front_default,

@@ -1,7 +1,8 @@
 ul[aria-hidden="true"] {
   display: none;
 }
-.body{
+.body {
+  margin: 1rem;
   padding: 1rem;
   justify-content: center;
   align-items: center;
@@ -9,8 +10,10 @@ ul[aria-hidden="true"] {
   display: flex;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(https://p4.wallpaperbetter.com/wallpaper/977/955/731/pokemon-latias-latios-pixels-wallpaper-preview.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.219), rgba(0, 0, 0, 0.212)), url(https://p4.wallpaperbetter.com/wallpaper/977/955/731/pokemon-latias-latios-pixels-wallpaper-preview.jpg);
+  height: 100vh; /* Establecer la altura en 100vh */
 }
+
 .team-pokemons, ul{
   justify-content: center;
   display: flex;
@@ -18,14 +21,16 @@ ul[aria-hidden="true"] {
   text-align: center;
 }
 /* Títulos */
-h2, h3, h5{
+h2,  h5{
 text-align: center;
-color: #000000;
+color: #161616;
 font-family: 'Press Start 2P', cursive;
 }
-h5{
-  color: #800b0b;
+
+h5, h3{
+  color: #e6e6e6;
 }
+
 
 /* Cuadros de Pokémon */
 .cuadro-1 {
@@ -78,11 +83,18 @@ justify-content: center;
   align-items: center;
   justify-content: center;
 }
+.pelea {
+  background-color: #000000c4;
+  padding: 1rem;
+  border: 2px solid #ff821c; /* Ancho del borde y color */
+  border-radius: 10px;  }
 
 .search-label {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  font-family: 'Press Start 2P', cursive;
+  background: #ffa9a9;
 }
 
 .search-input-container {
@@ -152,7 +164,7 @@ font-family: 'Press Start 2P', cursive;
   cursor: none;
 }
 .dos{
- background-color: #e2397a;
+ background-color: #e24d39;
  border: 0px solid transparent !important;
 }
 .tres{
@@ -174,12 +186,6 @@ padding: 10px;
 }
 
 /* Oponentes */
-.col-md-6{
-  width: 100%;
-}
-.col-md-6 ul {
-margin-left: 30px;
-}
 
 /* Selección aleatoria de Pokémon */
 .col-md-6 button {

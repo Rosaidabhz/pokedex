@@ -1,20 +1,41 @@
-  <div class="row justify-content-center">
-    <div *ngFor="let pokemon of pokemons" class="col-lg-2 col-md-3 col-6 mb-4 mx-3">
-      <div class="cuadro-1" [ngClass]="getTipoPokemonClass(pokemon.type)">
-        <h1 class="titlepokemon" [ngClass]="getTipoPokemonClass(pokemon.type)">{{ pokemon.name }}</h1>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{ pokemon.url.split('/')[6] }}.png" class="img-list">
-        <div class="calificacion">
-          <h2 class="datos">DATOS</h2>
-          <p class="datostexto">
-            Id: <span [ngStyle]="{color: 'red'}">{{ pokemon.id }}</span>
-            <br>
-            Type: <span [ngStyle]="{color: 'blue'}">{{ pokemon.type }}</span>
-            <br>
-            Height: <span [ngStyle]="{color: 'green'}">{{ pokemon.height }}</span>
-            <br>
-            Hp: <span [ngStyle]="{color: 'purple'}">{{ pokemon.hp }}</span>
-          </p>
-        </div>
+<!-- Agrega tu contenido existente -->
+<div class="row justify-content-center">
+  <div *ngFor="let pokemon of pokemons | slice: (currentPage-1)*15 : currentPage*15" class="col-lg-2 col-md-3 col-6 mb-4 mx-3">
+    <div class="cuadro-1" [ngClass]="getTipoPokemonClass(pokemon.type)">
+      <h1 class="titlepokemon" [ngClass]="getTipoPokemonClass(pokemon.type)">{{ pokemon.name }}</h1>
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{ pokemon.url.split('/')[6] }}.png" class="img-list">
+      <div class="calificacion">
+        <h2 class="datos">DATOS</h2>
+        <p class="datostexto">
+          Id: <span [ngStyle]="{color: 'red'}">{{ pokemon.id }}</span>
+          <br>
+          Type: <span [ngStyle]="{color: 'blue'}">{{ pokemon.type }}</span>
+          <br>
+          Height: <span [ngStyle]="{color: 'green'}">{{ pokemon.height }}</span>
+          <br>
+          Hp: <span [ngStyle]="{color: 'purple'}">{{ pokemon.hp }}</span>
+        </p>
       </div>
     </div>
   </div>
+</div>
+
+<!-- Agregamos la paginación después de tu contenido -->
+<nav aria-label="Page navigation" class="d-flex justify-content-center">
+  <ul class="pagination">
+    <li class="page-item" [class.disabled]="currentPage === 1">
+      <a class="page-link" (click)="previousPage()" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span> Previous
+      </a>
+    </li>
+    <li class="page-item" *ngFor="let page of displayedPageNumbers">
+      <a class="page-link" (click)="goToPage(page)">{{ page }}</a>
+    </li>
+    <li class="page-item" [class.disabled]="currentPage === getTotalPages()">
+      <a class="page-link" (click)="nextPage()" aria-label="Next">
+        Next <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
